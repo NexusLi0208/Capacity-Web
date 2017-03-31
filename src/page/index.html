@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>企想智能家居平台管理系统</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" media="screen" />
+    <link rel="stylesheet" href="../css/lib/animate.css">
+    <link rel="stylesheet" href="../css/lib/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!--[if lt IE 9]>
+   <script src="js/lib/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!--顶部导航开始-->
+    <nav class="top-nav">
+        <div class="nav-main">
+            <a href="#" class="logo"><img src="../img/index/nav_logo.png" alt=""></a>
+            <ul class="nav-list">
+                <li class="active">首页</li>
+                <li>异常数据</li>
+                <li>学生分组</li>
+            </ul>
+            <div class="user-icon">
+                <img src="../img/index/nav_headphoto.png" alt="">
+            </div>
+            <div class="user-group-info">
+                <p>分组名称</p>
+                <p>192.168.1.1</p>
+            </div>
+        </div>
+    </nav>
+    <!--顶部导航结束-->
+    <!--主功能区开始-->
+    <div class="main-container navfix">
+        <div class="swiper-wrapper main-content">
+            <!--banner开始-->
+            <div class="swiper-slide">
+                <div class="banner">
+                    <div class="bounceInLeft animate banner-left"><img src="../img/index/banner_left.png" alt=""></div>
+                    <div class="bounceInRight animate banner-right"><img src="../img/index/banner_right.png" alt=""></div>
+                </div>
+               <div class="app-info">
+                   <img src="../img/index/homepage_advertisement.png" alt="">
+               </div>
+            </div>
+            <!--banner结束-->
+        </div>
+    </div>
+    <!--主功能区结束-->
+
+    <!--底部滑动导航开始-->
+    <nav class="bottom-nav">
+        <div class="nav-container">
+            <div class="swiper-wrapper nav-main">
+                <ul class="swiper-slide nav-list">
+                    <li><a href=""><img src="../img/index/homepage_category_light.png" alt=""><span>灯光控制</span></a></li>
+                    <li><a href=""><img src="../img/index/homepage_category_curtain.png" alt=""><span>窗帘控制</span></a></li>
+                    <li><a href=""><img src="../img/index/homepage_category_environment.png" alt=""><span>环境监控</span></a></li>
+                    <li><a href=""><img src="../img/index/homepage_category_scene.png" alt=""><span>场景控制</span></a></li>
+                </ul>
+                <ul class="swiper-slide nav-list">
+                    <li><a href=""><img src="../img/index/homepage_category_light.png" alt=""><span>灯光控制</span></a></li>
+                    <li><a href=""><img src="../img/index/homepage_category_curtain.png" alt=""><span>窗帘控制</span></a></li>
+                    <li><a href=""><img src="../img/index/homepage_category_environment.png" alt=""><span>环境监控</span></a></li>
+                    <li><a href=""><img src="../img/index/homepage_category_scene.png" alt=""><span>场景控制</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="swiper-btn-box">
+            <div class="nav-btn prev-btn"><img src="../img/index/homepage_arrow_left.png" alt=""></div>
+            <div class="nav-btn next-btn"><img src="../img/index/homepage_arrow_right.png" alt=""></div>
+        </div>
+    </nav>
+    <!--底部滑动导航结束-->
+    <script src="../js/lib/jquery.js"></script>
+    <script src="../js/lib/swiper.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script>
+        var swiperMain = new Swiper('.main-container');
+        var swiperNav = new Swiper('.nav-container', {
+            prevButton: '.prev-btn',
+            nextButton: '.next-btn',
+        });
+    </script>
+</body>
+
+</html>

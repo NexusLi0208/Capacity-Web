@@ -1,0 +1,35 @@
+// 通用样式
+html,
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 750px;
+    font-family: "Century Gothic", "Microsoft Yahei";
+}
+
+body {
+    background: $pageBgColor;
+    background-image: url(../img/login/login_bg.png) no-repeat;
+    background-size: cover;
+}
+
+.main-container {
+    width: 1160px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.navfix::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 80px;
+}
+
+.floatl {
+    float: left;
+}
+
+.floatr {
+    float: right;
+}

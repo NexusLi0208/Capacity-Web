@@ -1,0 +1,30 @@
+// 首屏
+.main-content {
+    width: 100%; // banner
+    margin-top:20px;
+    .animate {
+        animation-duration: 1.5s;
+        animation-fill-mode: both;
+        animation-delay:0s;
+        visibility: visible;
+    }
+    .banner {
+        position: relative;
+        width: 100%;
+        height: 420px;
+        .banner-left {
+            position: absolute;
+            left: -2px;
+            z-index: 99;
+        }
+        .banner-right {
+            position: absolute;
+            right: -2px;
+            z-index: 98;
+        }
+    }
+    .app-info{
+        width:100%;
+        margin-top:10px;
+    }
+}

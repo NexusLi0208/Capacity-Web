@@ -1,0 +1,16 @@
+// 2017/3/30
+// 统一浏览器差异
+@import "./lib/mixin.scss";
+@import "./lib/normaliz.scss";
+// 颜色
+@import "./lib/color.scss";
+// 页面通用
+@import "./page/common.scss";
+// 表单相关
+@import "./page/form.scss";
+//登录页
+@import "./page/login.scss";
+// 导航
+@import "./page/nav.scss";
+//主页
+@import "./page/index.scss"
