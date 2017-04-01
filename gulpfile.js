@@ -11,6 +11,7 @@ var livereload = require('gulp-livereload');
 var webserver = require('gulp-webserver');
 var autoprefixer = require('gulp-autoprefixer');
 var del = require('del');
+var spriter = require('gulp-css-spriter');
 
 // 主项目流程
 // 默认任务
@@ -27,7 +28,7 @@ gulp.task('webserver', function () {
             host:'10.1.0.24'
         }));
 });
-gulp.tast('xuebi',function(){
+gulp.task('xuebi',function(){
     gulp.src('src/css/style.css')
     .pipe(spriter({
             // The path and file name of where we will save the sprite sheet
@@ -59,7 +60,7 @@ gulp.task('sass', function () {
                         'android >= 2.3',
                         'bb >= 10'
                     ],
-                    cascade: true, //是否美化属性值 默认：true 像这样：
+                    cascade: false, //是否美化属性值 默认：true 像这样：
                     //-webkit-transform: rotate(45deg);
                     //        transform: rotate(45deg);
                     remove: true //是否去掉不必要的前缀 默认：true 
