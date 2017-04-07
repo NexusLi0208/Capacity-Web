@@ -1,0 +1,99 @@
+// 窗帘控制
+.curtain-main {
+    width: 100%;
+    text-align: left;
+    padding: 0 40px;
+    font-size: 0;
+    box-sizing: border-box;
+    li {
+        position: relative;
+        display: inline-block;
+        width: 230px;
+        height: 230px;
+        margin: 0 20px 30px;
+        background: rgba(255, 255, 255, .2);
+        border-radius: 10px;
+        cursor: pointer;
+        vertical-align: middle;
+        .item-add-icon {
+            display: block;
+            width: 80px;
+            height: 80px;
+            margin: 37px auto 20px;
+            background-size: cover;
+        }
+        .item-icon,
+        {
+            height: 50px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 0;
+            span {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                &.curtain-on {
+                    background: url(../img/control-icon/curtain_opened_btn_normal.png) no-repeat;
+                    background-size: cover;
+                    &.active{
+                        background: url(../img/control-icon/curtain_opened_btn_pressed.png) no-repeat;
+                    }
+                }
+                  &.curtain-suspend {
+                    background: url(../img/control-icon/curtain_stopped_btn_normal.png) no-repeat;
+                    background-size: cover;
+                    margin:0 16px;
+                     &.active{
+                        background: url(../img/control-icon/curtain_stopped_btn_pressed.png) no-repeat;
+                    }
+                }
+                  &.curtain-off {
+                    background: url(../img/control-icon/curtain_opened_btn_normal.png) no-repeat;
+                    background-size: cover;
+                     &.active{
+                        background: url(../img/control-icon/curtain_opened_btn_pressed.png) no-repeat;
+                    }
+                }
+            }
+        }
+        .item-name {
+            display: block;
+            font-size: 18px;
+            color: #fff;
+            text-align: center;
+            padding-top: 24px;
+            margin-bottom:40px;
+        }
+        .control-box {
+            position: absolute;
+            bottom: 0;
+            width: 90%;
+            left: 0;
+            right:0;
+            margin:auto;
+            height: 70px;
+            font-size: 0;
+            border-top: 1px rgba(255, 255, 255, .3) solid;
+            span {
+                display: inline-block;
+                width: 50%;
+                height: 70px;
+                padding: 20px 0;
+                box-sizing: border-box;
+                text-align: center;
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+        &.add-btn {
+            span {
+                padding-top: 14px;
+            }
+            &:active {
+                background: rgba(73, 215, 251, .3);
+            }
+        }
+    }
+}

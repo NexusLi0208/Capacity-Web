@@ -9,7 +9,7 @@ body {
 
 body {
     background: $pageBgColor;
-    background-image: url(../img/login/login_bg.png) no-repeat;
+    background-image: url(../img/login/login_bg.jpg) no-repeat;
     background-size: cover;
 }
 
@@ -32,4 +32,16 @@ body {
 
 .floatr {
     float: right;
+}
+
+.text-l {
+    text-align: left;
+}
+
+.text-m {
+    text-align: center;
+}
+
+.text-r {
+    text-align: right;
 }

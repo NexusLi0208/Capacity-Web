@@ -1,11 +1,11 @@
 // 首屏
 .main-content {
     width: 100%; // banner
-    margin-top:20px;
+    margin-top: 20px;
     .animate {
         animation-duration: 1.5s;
         animation-fill-mode: both;
-        animation-delay:0s;
+        animation-delay: 0s;
         visibility: visible;
     }
     .banner {
@@ -14,17 +14,23 @@
         height: 420px;
         .banner-left {
             position: absolute;
-            left: -2px;
+            left: 0;
             z-index: 99;
         }
         .banner-right {
             position: absolute;
-            right: -2px;
+            right: 0;
             z-index: 98;
         }
     }
-    .app-info{
-        width:100%;
-        margin-top:10px;
+    .app-info {
+        width: 100%;
+        margin-top: 10px;
     }
+}
+
+// 控制区域
+.control-main {
+    width: 100%;
+    text-align: center;
 }

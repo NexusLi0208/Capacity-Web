@@ -21,7 +21,7 @@
         <div class="nav-main">
             <a href="#" class="logo"><img src="../img/index/nav_logo.png" alt=""></a>
             <ul class="nav-list">
-                <li class="active">首页</li>
+                <li class="active"><a href="index.html">首页</a></li>
                 <li>异常数据</li>
                 <li>学生分组</li>
             </ul>
@@ -38,6 +38,7 @@
     <!--主功能区开始-->
     <div class="main-container navfix">
         <div class="swiper-wrapper main-content">
+
             <!--banner开始-->
             <div class="swiper-slide">
                 <div class="banner">
@@ -49,6 +50,66 @@
                 </div>
             </div>
             <!--banner结束-->
+
+            <!--灯光控制开始-->
+            <div class="swiper-slide">
+                <div class="control-main">
+                    <ul class="light-main">
+                        <li class="add-btn js-add-light">
+                            <i class="item-add-icon"><img src="../img/control-icon/add_device_icon.png" alt=""></i>
+                            <span class="item-name">添加设备</span>
+                        </li>
+
+                        <li><i class="item-icon light-on"></i>
+                            <span class="item-name">室内灯1</span>
+                            <div class="control-box">
+                                <span class="js-edit-light"><img src="../img/control-icon/edit.png" alt=""></span>
+                                <span class="js-delete-light"><img src="../img/control-icon/delete.png" alt=""></span>
+                            </div>
+                        </li>
+                        <li><i class="item-icon light-off"></i>
+                            <span class="item-name">室内灯1</span>
+                            <div class="control-box">
+                                <span class="js-edit-light"><img src="../img/control-icon/edit.png" alt=""></span>
+                                <span class="js-delete-light"><img src="../img/control-icon/delete.png" alt=""></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--灯光控制结束-->
+
+            <!--窗帘控制开始-->
+            <div class="swiper-slide">
+                <div class="control-main">
+                    <ul class="curtain-main">
+                        <li class="add-btn js-add-curtain">
+                            <i class="item-add-icon"><img src="../img/control-icon/add_device_icon.png" alt=""></i>
+                            <span class="item-name">添加设备</span>
+                        </li>
+                        <li>
+                            <span class="item-name">窗帘1</span>
+                            <div class="item-icon"><span class="curtain-on"></span><span class="curtain-suspend"></span><span class="curtain-off"></span></div>
+                            <div class="control-box">
+                                <span class="js-edit-curtain"><img src="../img/control-icon/edit.png" alt=""></span>
+                                <span class="js-delete-curtain"><img src="../img/control-icon/delete.png" alt=""></span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="item-name">窗帘2</span>
+                            <div class="item-icon"><span class="curtain-on"></span><span class="curtain-suspend"></span><span class="curtain-off"></span></div>
+                            <div class="control-box">
+                                <span class="js-edit-curtain"><img src="../img/control-icon/edit.png" alt=""></span>
+                                <span class="js-delete-curtain"><img src="../img/control-icon/delete.png" alt=""></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--窗帘控制结束-->
+
+            <!--环境控制开始-->
+            <!--环境控制结束-->
         </div>
     </div>
     <!--主功能区结束-->
@@ -57,31 +118,17 @@
         <div class="nav-container">
             <div class="swiper-wrapper nav-main">
                 <ul class="swiper-slide nav-list">
-                    <li>
-                        <a href=""><img src="../img/index/homepage_category_light.png" alt=""><span>灯光控制</span></a>
+                    <li data-topage="1">
+                        <a href="javascript:;"><img src="../img/index/homepage_category_light.png" alt=""><span>灯光控制</span></a>
                     </li>
-                    <li>
-                        <a href=""><img src="../img/index/homepage_category_curtain.png" alt=""><span>窗帘控制</span></a>
+                    <li data-topage="2">
+                        <a href="javascript:;"><img src="../img/index/homepage_category_curtain.png" alt=""><span>窗帘控制</span></a>
                     </li>
-                    <li>
-                        <a href=""><img src="../img/index/homepage_category_environment.png" alt=""><span>环境监控</span></a>
+                    <li data-topage="3">
+                        <a href="javascript:;"><img src="../img/index/homepage_category_environment.png" alt=""><span>环境监控</span></a>
                     </li>
-                    <li>
-                        <a href=""><img src="../img/index/homepage_category_scene.png" alt=""><span>场景控制</span></a>
-                    </li>
-                </ul>
-                <ul class="swiper-slide nav-list">
-                    <li>
-                        <a href=""><img src="../img/index/homepage_category_light.png" alt=""><span>灯光控制</span></a>
-                    </li>
-                    <li>
-                        <a href=""><img src="../img/index/homepage_category_curtain.png" alt=""><span>窗帘控制</span></a>
-                    </li>
-                    <li>
-                        <a href=""><img src="../img/index/homepage_category_environment.png" alt=""><span>环境监控</span></a>
-                    </li>
-                    <li>
-                        <a href=""><img src="../img/index/homepage_category_scene.png" alt=""><span>场景控制</span></a>
+                    <li data-topage="4">
+                        <a href="javascript:;"><img src="../img/index/homepage_category_scene.png" alt=""><span>场景控制</span></a>
                     </li>
                 </ul>
             </div>
@@ -92,11 +139,105 @@
 
     </nav>
     <!--底部滑动导航结束-->
+    <!--灯光控制模态框开始-->
+    <div class="modal-main" hidden id="device_modal">
+        <div class="modal-bg js-close"></div>
+        <div class="modal-dolog">
+            <div class="modal-content lg-modal animate fadeInUp">
+                <i class="close-modal-btn js-close"><img src="../img/cancel.png" alt=""></i>
+                <div class="modal-header text-m">编辑设备</div>
+                <div class="modal-body">
+                    <div class="form-box">
+                        <div class="form-group">
+                            <input type="text" real="select" readonly name="" value="" placeholder="选择网关">
+                            <i><img src="../img/selection_arrow.png" alt=""></i>
+                            <ul class="select-list" hidden>
+                                <li>192.168.0.1</li>
+                                <li>192.168.0.2</li>
+                                <li>192.168.0.3</li>
+                            </ul>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" readonly real="select" name="" value="" placeholder="选择设备">
+                            <i><img src="../img/selection_arrow.png" alt=""></i>
+                            <ul class="select-list" hidden>
+                                <li>灯光</li>
+                                <li>窗帘</li>
+                                <li>环境控制</li>
+                            </ul>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="" value="" placeholder="设备地址">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="" value="" placeholder="设备通道">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="" value="" maxlength="6" placeholder="设备名称(6个字符内)">
+                        </div>
+                        <div class="form-group">
+                            <button class="modal-form-btn" type="button">新增设备</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--灯光控制模态框结束-->
+
+    <!--窗帘控制模态框开始-->
+    <div class="modal-main" hidden id="curtain_modal">
+        <div class="modal-bg js-close"></div>
+        <div class="modal-dolog">
+            <div class="modal-content lg-modal animate fadeInUp">
+                <i class="close-modal-btn js-close"><img src="../img/cancel.png" alt=""></i>
+                <div class="modal-header text-m">编辑设备</div>
+                <div class="modal-body">
+                    <div class="form-box">
+                        <div class="form-group">
+                            <input type="text" real="select" readonly name="" value="" placeholder="选择网关">
+                            <i><img src="../img/selection_arrow.png" alt=""></i>
+                            <ul class="select-list" hidden>
+                                <li>192.168.0.1</li>
+                                <li>192.168.0.2</li>
+                                <li>192.168.0.3</li>
+                            </ul>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" readonly real="select" name="" value="" placeholder="选择设备">
+                            <i><img src="../img/selection_arrow.png" alt=""></i>
+                            <ul class="select-list" hidden>
+                                <li>灯光</li>
+                                <li>窗帘</li>
+                                <li>环境控制</li>
+                            </ul>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="" value="" placeholder="设备地址">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="" value="" maxlength="6" placeholder="设备名称(6个字符内)">
+                        </div>
+                        <div class="form-group">
+                            <button class="modal-form-btn" type="button">新增设备</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--窗帘控制模态框结束-->
     <script src="../js/lib/jquery.js"></script>
     <script src="../js/lib/swiper.min.js"></script>
     <script src="../js/common.js"></script>
+    <!--灯光-->
+    <script src="../js/lightControl.js"></script>
+    <!--窗帘-->
+    <script src="../js/curtainControl.js"></script>
     <script>
-        var swiperMain = new Swiper('.main-container');
+        var swiperMain = new Swiper('.main-container', {
+
+        });
         var swiperNav = new Swiper('.nav-container', {
             prevButton: '.prev-btn',
             nextButton: '.next-btn',

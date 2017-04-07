@@ -1,0 +1,76 @@
+// 灯光控制
+.light-main {
+    width: 100%;
+    text-align: left;
+    padding: 0 55px;
+    font-size: 0;
+    box-sizing: border-box;
+    li {
+        position: relative;
+        display: inline-block;
+        width: 170px;
+        height: 210px;
+        margin: 0 20px 30px;
+        background: rgba(255, 255, 255, .2);
+        border-radius: 10px;
+        cursor: pointer;
+        vertical-align: middle;
+        .item-add-icon {
+            display: block;
+            width: 80px;
+            height: 80px;
+            margin: 20px auto 16px;
+            background-size: cover;
+        }
+        .item-icon,
+        {
+            display: block;
+            width: 80px;
+            height: 80px;
+            margin: 20px auto 16px;
+            background: url(../img/control-icon/light_btn_normal.png) no-repeat;
+            background-size: cover;
+            img {
+                width: 100%;
+            }
+            &.light-on {
+                background: url(../img/control-icon/light_btn_pressed.png) no-repeat;
+                background-size: cover;
+            }
+        }
+        .item-name {
+            display: block;
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+        }
+        .control-box {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            font-size: 0;
+            border-top: 1px rgba(255, 255, 255, .3) solid;
+            span {
+                display: inline-block;
+                width: 50%;
+                height: 50px;
+                padding: 10px 0;
+                box-sizing: border-box;
+                text-align: center;
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+        &.add-btn {
+            span {
+                padding-top: 14px;
+            }
+            &:active {
+                background: rgba(73, 215, 251, .3);
+            }
+        }
+    }
+}

@@ -1,0 +1,175 @@
+// 模态框
+.modal-main {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    z-index: 2016; // 模态框背景
+    .modal-bg {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2016;
+        background: rgba(0, 13, 26, .6);
+    } // 模态框主体
+    .modal-dolog {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .modal-content {
+        position: relative;
+        background: #fff;
+        border-radius: 10px;
+        z-index: 2018;
+        &.sm-modal {
+            width: 440px;
+            min-height: 260px;
+        }
+        &.lg-modal {
+            width: 660px;
+        }
+        .close-modal-btn {
+            position: absolute;
+            display: block;
+            cursor: pointer;
+            top: -50px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            img {
+                width: 100%;
+            }
+        }
+        .modal-header {
+            width: 100%;
+            height: 80px;
+            padding: 0 50px;
+            line-height: 80px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #009cff;
+            box-sizing: border-box;
+        }
+        .modal-body {
+            p.txt {
+                color: #333;
+                font-size: 20px;
+                padding: 0 50px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            } // 表单
+            .form-box {
+                width: 100%;
+                padding: 0 50px 26px;
+                box-sizing: border-box;
+            }
+            .form-group {
+                width: 100%;
+                position: relative;
+                box-sizing: border-box;
+                padding-bottom: 14px;
+                i {
+                    display: block;
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                    right: 0;
+                    top: 5px;
+                    img {
+                        width: 100%;
+                    }
+                }
+                input {
+                    width: 100%;
+                    height: 50px;
+                    border: 1px #b4cedb solid;
+                    border-radius: 2px;
+                    outline: none;
+                    padding-left: 20px;
+                    color: #333;
+                    font-size: 18px;
+                    box-sizing: border-box;
+                    &:focus {
+                        border-color: #009cff;
+                        box-shadow: 0;
+                        outline: none;
+                    }
+                }
+                .select-list {
+                    width: 100%;
+                    margin: 0;
+                    height: 130px;
+                    padding: 0;
+                    list-style: none;
+                    position: absolute;
+                    top: 50px;
+                    background: #fff;
+                    box-shadow: 0 2px 4px #eee;
+                    z-index: 2018;
+                    overflow: auto;
+                    li {
+                        width: 100%;
+                        height: 40px;
+                        line-height: 40px;
+                        padding: 5px 20px;
+                        cursor: pointer;
+                        font-size: 18px;
+                        color: #333;
+                        box-sizing: border-box;
+                        &:hover {
+                            color: #009cff;
+                        }
+                    }
+                }
+                .modal-form-btn {
+                    width: 100%;
+                    height: 50px;
+                    background: #009cff;
+                    cursor: pointer;
+                    font-size: 20px;
+                    color: #fff;
+                    border: none;
+                    border-radius: 2px;
+                    outline: none;
+                }
+            }
+        }
+        .modal-footer {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            padding: 20px 50px;
+            box-sizing: border-box;
+            .modal-btn {
+                width: 160px;
+                height: 50px;
+                font-size: 20px;
+                border-radius: 2px;
+                &.cancel-btn {
+                    background: #fff;
+                    color: #a5bcc8;
+                    border: 1px #b4cedb solid;
+                }
+                &.success-btn {
+                    background: #009cff;
+                    color: #fff;
+                    border: 1px #009cff solid;
+                }
+            }
+        }
+    }
+}

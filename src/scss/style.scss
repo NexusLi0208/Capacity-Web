@@ -2,6 +2,7 @@
 // 统一浏览器差异
 @import "./lib/mixin.scss";
 @import "./lib/normaliz.scss";
+@import "./lib/global.scss";
 // 颜色
 @import "./lib/color.scss";
 // 页面通用
@@ -13,4 +14,10 @@
 // 导航
 @import "./page/nav.scss";
 //主页
-@import "./page/index.scss"
+@import "./page/index.scss";
+//灯光控制
+@import "./page/light-control.scss";
+// 窗帘控制
+@import "./page/curtain-control.scss";
+//模态框封装
+@import "./page/modal.scss"
